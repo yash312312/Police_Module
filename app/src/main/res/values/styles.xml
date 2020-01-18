@@ -7,5 +7,15 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="Widget.MaterialComponents.Button.OutlinedButton" parent="Widget.AppCompat.Button"  >
+        
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor"></item>
+    </style>
+
 
 </resources>
