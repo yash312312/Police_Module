@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.RegisterActivity">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/activity_register_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="90sp"
+        android:focusable="true"
+        android:fontFamily="sans-serif"
+        android:text="Welcome to  ANOMITE"
+        android:textAlignment="center"
+        android:textColor="@color/md_pink_800"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:visibility="visible">
+
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/editTextStyle"
+        android:layout_marginTop="260dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/activity_register_tv_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="260dp"
+            android:hint="Email"
+            android:drawableRight="@drawable/ic_email_black_24dp"
+            android:drawablePadding="10dp"
+            android:inputType="text"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/editTextStyle"
+        android:layout_marginTop="340dp"
+        android:elevation="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/activity_register_tv_confirmpass"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="340dp"
+            android:maxLength="5"
+            android:inputType="number"
+            android:hint="Password"
+            android:drawablePadding="10dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/editTextStyle"
+        android:layout_marginTop="420dp"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_register_tv_password"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="420dp"
+            android:hint="Confirm Password"
+            android:drawableRight="@drawable/ic_remove_red_eye_black_24dp"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="500dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:id="@+id/progressbar"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_register_btn_register"
+        style="@style/ButtonStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        android:text="REGISTER"
+        android:textColor="@color/md_grey_50"
+        app:backgroundTint="@color/md_pink_600"
+        app:iconPadding="20dp"
+        app:iconSize="16dp"
+        app:iconTint="@null"
+        app:rippleColor="@color/md_pink_100" />
+
+    <TextView
+        android:layout_width="220dp"
+        android:layout_height="20dp"
+        android:text="Already have a account?"
+        android:layout_marginTop="650dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="Login"
+        android:id="@+id/activity_register_tv_login"
+        android:layout_marginTop="650dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="290dp"
+        android:textColor="@color/md_pink_700"
+        />
+
+</RelativeLayout>
