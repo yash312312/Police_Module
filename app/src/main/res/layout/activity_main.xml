@@ -2,19 +2,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity"
     android:background="@drawable/ui_design"
     >
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/act_main_toolbar"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        />
+
+
    <FrameLayout
        android:layout_width="match_parent"
-       android:layout_height="645dp"
+       android:layout_height="match_parent"
        android:id="@+id/act_main_fragment_layout"
        android:layout_alignParentTop="true"
->
+       android:layout_above="@id/act_main_bnv"
+       android:layout_marginTop="50dp">
 
    </FrameLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -24,9 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:menu="@menu/bottom_navigation"
-        android:layout_below="@+id/act_main_fragment_layout"
+         android:layout_alignParentBottom="true"
+
         />
-
-
 
 </RelativeLayout>

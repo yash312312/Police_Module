@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/police_frag_tv_stationimage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingLeft="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_green_300"
+                    android:text="Location "
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/md_grey_900"
+                    android:id="@+id/police_frag_tv_locationplace"
+                    android:text="Location place"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/police_frag_policestation_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_900"
+                    android:text="Police Station"
+                    android:textSize="16dp"/>
+                <TextView
+                    android:id="@+id/police_frag_police_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/md_grey_900"
+                    android:textSize="16dp"
+                    android:text="Address will be stored here" />
+                <TextView
+                    android:id="@+id/police_frag_tv_phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_900"
+                    android:layout_marginTop="3dp"
+                    android:textSize="16dp"
+                    android:text="Phone no" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

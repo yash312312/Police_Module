@@ -1,13 +1,17 @@
 package com.example.policemodule;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.policemodule.map.Map_Fragment;
+import com.example.policemodule.police.Police_fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import butterknife.BindView;
@@ -18,17 +22,27 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @BindView(R.id.act_main_bnv)
     BottomNavigationView botnav;
 
-    private  Police_fragment policeFragment;
-    private  Map_Fragment mapfragment;
+    private Police_fragment policeFragment;
+    private Map_Fragment mapfragment;
 
     private FragmentManager fragmentManager;
 
+    @BindView(R.id.act_main_toolbar)
+    Toolbar toolbar;
 
+
+   // @BindView(R.id.act_main_drawer_layout)
+   // DrawerLayout drawerLayout;
+
+    ActionBarDrawerToggle actionBarDrawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+
+
         botnav.setOnNavigationItemSelectedListener(this);
 
         if(policeFragment  == null){
@@ -66,6 +80,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
     }
+    /*
+    private  void setupToolbar(){
+
+        setSupportActionBar(toolbar);
+        actionBarDrawerToggle= new ActionBarDrawerToggle(this, drawerLayout,toolbar,R.string.app_name,R.string.app_name);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();*/
 
 
 }
+
