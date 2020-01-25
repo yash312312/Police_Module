@@ -19,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity
 {
@@ -27,19 +28,19 @@ public class LoginActivity extends AppCompatActivity
     @BindView(R.id.activity_login_tv_password)
     TextView password;
     @BindView(R.id.activity_login_btn_login)
-    Button button;
+    Button login;
     @BindView(R.id.activity_login_tv_join)
-            TextView join;
-
+    TextView join;
 
 
     FirebaseAuth firebaseAuth;
-    FirebaseAuth.AuthStateListener authStateListener;
+   FirebaseAuth.AuthStateListener authStateListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
         firebaseAuth=FirebaseAuth.getInstance();
 
 
@@ -54,46 +55,44 @@ public class LoginActivity extends AppCompatActivity
             }
         };
 
-        button.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String emailId=email.getText().toString();
-                String pwd=password.getText().toString();
-                if(TextUtils.isEmpty(emailId))
-                {
+                String emailId = email.getText().toString();
+                String pwd = password.getText().toString();
+                if (TextUtils.isEmpty(emailId)) {
                     Toast.makeText(LoginActivity.this, "Plese enter valid email", Toast.LENGTH_SHORT).show();
                 }
-                if(TextUtils.isEmpty(pwd))
-                {
-                    Toast.makeText(LoginActivity.this,"Please enter valid password",Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(pwd)) {
+                    Toast.makeText(LoginActivity.this, "Please enter valid password", Toast.LENGTH_SHORT).show();
                 }
-                firebaseAuth.signInWithEmailAndPassword(emailId,pwd)
+                firebaseAuth.signInWithEmailAndPassword(emailId, pwd)
                         .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful())
-                                {
+                                if (task.isSuccessful()) {
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                     startActivity(intent);
                                     finish();
+                                } else {
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);//will be commented out
+                                    startActivity(intent);//will be commented out
+                                    Toast.makeText(LoginActivity.this, "Login failed or user not found", Toast.LENGTH_SHORT).show();
                                 }
-                                else
-                                    Toast.makeText(LoginActivity.this,"Login failed or user not found",Toast.LENGTH_SHORT).show();
                             }
 
                         });
+            }});
+
                 join.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent=new Intent(LoginActivity.this, RegisterActivity.class);
                         startActivity(intent);
 
-                    }
-                });
-            }
-        });
-    }
+                    }});
+                }
     protected void onstart()
     {
         super.onStart();

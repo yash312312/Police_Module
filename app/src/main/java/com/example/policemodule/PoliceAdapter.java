@@ -32,7 +32,6 @@ public class PoliceAdapter extends RecyclerView.Adapter<PoliceAdapter.ViewHolder
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.police_fragment_list_item,parent,false);
         return new ViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position)
     {
