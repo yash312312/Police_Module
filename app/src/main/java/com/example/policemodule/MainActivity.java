@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         fragmentManager.beginTransaction().replace(R.id.act_main_fragment_layout, frag).commit();
 
 
+
     }
 
 
