@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/ui_design"
+    android:gravity="bottom"
+    android:padding="16dp"
+    android:alpha="0.9"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    >
+
+  <com.mikhaellopez.circularimageview.CircularImageView
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:src="@drawable/nitshacks"
+      />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:text="NITS Hacks"
+    android:textColor="@color/md_grey_50"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Information"
+    android:textSize="10dp"
+    android:textColor="@color/md_grey_50"
+    />
+
+</LinearLayout>

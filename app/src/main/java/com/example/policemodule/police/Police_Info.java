@@ -1,9 +1,12 @@
 package com.example.policemodule.police;
 
+import android.content.Intent;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Police_Info
 {
+
     private int image;
     private String location,policestation,address,phno;
 

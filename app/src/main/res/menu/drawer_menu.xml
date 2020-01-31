@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showsIn="navigation">
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/dashboard"
+            android:title="Profile"
+            android:icon="@drawable/ic_person_black_24dp"/>
+        <item android:id="@+id/events"
+            android:title="Settings"
+            android:icon="@drawable/ic_accessibility_black_24dp"/>
+        <item android:id="@+id/search"
+            android:title="About Us"
+            android:icon="@drawable/common_full_open_on_phone"/>
+
+    </group>
+
+   </menu>
