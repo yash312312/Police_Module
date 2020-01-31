@@ -60,7 +60,6 @@
             android:layout_gravity="center"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="340dp"
-            android:maxLength="5"
             android:inputType="textPassword"
             android:hint="Password"
             android:drawablePadding="10dp"
